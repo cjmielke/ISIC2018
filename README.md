@@ -25,6 +25,28 @@ Overall, the flexibility of this library opens the door for tons of hyperparamet
    - Hyperparameter results
    - Visualized segmentation results on validation set for best models
 
+### Results
+
+IoU (Intersection over Union) of validation set images for various network backbones.
+
+![boxplot](img/boxplot.png)
+
+Segmentations performed on a handful of validation images for the best-performing efficientnet model.
+
+Lessons learned : I think one of the mistakes I made was using a mirrored padding approach in the augmentations pipeline. You can see that the borders of some images are flipped. Note the rulers in the 1st and 3rd image. In some cases, as in image 4, the flipping can produce regions that look like lesions! (heh, that rhymed). Training/inference with different padding settings might alleviate this. 
+
+![seg](img/val_seg_3.png)
+![seg](img/val_seg_4.png)
+![seg](img/val_seg_1.png)
+![seg](img/val_seg_2.png)
+![seg](img/val_seg_5.png)
+![seg](img/val_seg_6.png)
+![seg](img/val_seg_7.png)
+![seg](img/val_seg_8.png)
+![seg](img/val_seg_9.png)
+
+
+
 
 ### Next steps
 - [ ] Implement self-supervised contrastive loss on derm images to pre-train backbones and perform domain transfer learning.
