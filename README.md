@@ -7,7 +7,7 @@ Overall, the flexibility of this library opens the door for tons of hyperparamet
 
 ### Overall process
 
-1. Performed basic exploration of the dataset in [this notebook](ISIC 2018 EDA.ipynb)
+1. Performed basic exploration of the dataset in [this notebook](EDA.ipynb)
 2. Implemented training loop in pycharm
 3. Executed training script in parallel on server with a variety of hyperparameter sweeps
     - [x] pretrained backbone architectures
