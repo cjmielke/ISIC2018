@@ -59,6 +59,7 @@ def get_training_augmentation():
             ],
             p=0.9,
         ),
+        #A.Resize(HEIGHT-HEIGHT%6, WIDTH-WIDTH%6, interpolation=2, always_apply=True),           # PSPNet requires sizes divisible by 6
         A.Lambda(mask=round_clip_0_1),
         #A.ToFloat(always_apply=True)               # didn't fix my problem .... https://github.com/qubvel/segmentation_models/issues/509
     ]
@@ -69,6 +70,8 @@ def get_validation_augmentation():
     test_transform = [
         A.PadIfNeeded(min_height=HEIGHT, min_width=WIDTH),
         #A.ToFloat(always_apply=True)
+        #A.Resize(HEIGHT-HEIGHT%6, WIDTH-WIDTH%6, interpolation=2, always_apply=True),
+        #A.Lambda(mask=round_clip_0_1),
     ]
     return A.Compose(test_transform)
 

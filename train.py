@@ -75,7 +75,7 @@ def trainModel(args, learningRate=0.0001, EPOCHS=10):
 
     # I'll get Weights and Biases working on the new server soon, but for now, I'll just log experiments to flatfiles
     runID = str(uuid.uuid4())
-    logger = MyCSVLogger(f'logs/experiment-{runID}.csv')    # super hacky quick technique to log hyperparams alongside training curves
+    logger = MyCSVLogger(f'logs/loss/experiment-{runID}.csv')    # super hacky quick technique to log hyperparams alongside training curves
     logger.hyperparams = args
     logger.otherfields = dict(nparams=model.count_params())
     callbacks = [
@@ -98,7 +98,7 @@ def trainModel(args, learningRate=0.0001, EPOCHS=10):
 
 def get_args(bs=4, act='relu', fc1=128, fc2=64):
         parser = argparse.ArgumentParser(description="")
-        parser.add_argument('-backbone', default='efficientnetb3', type=str)
+        parser.add_argument('-backbone', default='efficientnetb1', type=str)
         parser.add_argument('-model', default='Unet', type=str, help='One of Unet, PSPNet, Linknet, FPN')
         parser.add_argument('-batchsize', default=bs, type=int)
         parser.add_argument('-lossfunc', default='dice', type=str)
