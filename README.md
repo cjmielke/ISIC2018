@@ -28,7 +28,7 @@ Overall, the flexibility of this library opens the door for tons of hyperparamet
 ### Results
 
 ##### Best models
-IoU (Intersection over Union) of validation set images for various network backbones.
+IoU (Intersection over Union) of validation set images for various network backbones. The boxplot below shows the performance on the validation set for the last 5 epochs of training.
 
 ![boxplot](img/boxplot.png)
 
