@@ -3,7 +3,7 @@
 This repository makes use of the excellent [segmentation models](https://github.com/qubvel/segmentation_models) library (based on Keras) to segment skin lesions.
 This library exposes 4 primary segmentation models, many pretrained backbone architectures (I count 34!), and a huge number of recommneded loss functions.
 
-Overall, the flexibility of this library opens the door for tons of hyperparameter experiments to find the best architecutes.
+Overall, the flexibility of this library opens the door for tons of hyperparameter experiments to find the best architectures, and since I just built a new server to capitalize on my apartments free electric service, this project served as a well-timed stress test!
 
 ### Overall process
 
